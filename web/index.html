@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Items</title>
+        <script src="index.js"></script>
+    </head>
+    <body onload="load()">
+        <p>
+            New Item <input>
+        </p>
+        <p>
+            <ul></ul>
+        </p>
+    </body>
+</html>
+<!-- 
+modificati generarea listei sa produca pentru fiecare element cate un input care contine in value textul elemeentului si un link cu textul Remove;
+adaugati o metoda changeItem pe evenimentul onkeyup al input-ului generat pentru fiecare elemeent din lista;
+metoda changeItem va avea argumentul event prin intermediul caruia va verifica daca s-a tastat Enter iar elementul contine un text, cu care va apela o ruta pe server la o adresa de forma /items/:id apelata cu PUT;
+implementati o ruta in server.js care sa raspunda la PUT pe contextul /items/:id si care sa apeleze service.changeItem(id, request.body);
+adaugati metoda changeItem in service.js care cauta dupa id in verctorul items elementul si daca il gaseste, atunci ii modifica textul si salveaza cu storeItems(items, path) continutul in fisier;
+link-ul Remove va apela in continuare removeItem(id). -->
